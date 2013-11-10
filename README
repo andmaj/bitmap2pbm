@@ -1,0 +1,37 @@
+bitmap2pbm
+==========
+Creates a P4 type PBM image from a binary file.
+
+To compile:
+make
+
+To compile without signal handling:
+make CFLAGS='-DNOSIGNAL'
+
+To run:
+./bin/bitmap2pbm
+
+To clean:
+make clean
+
+To print progress:
+kill -SIGUSR1 pid
+
+Usage: bitmap2pbm [options]
+
+Options:
+  --aspect NUM Aspect ratio of image (default: 4:3)
+  --width NUM  Image width in pixels (multiple of 8)
+  --height NUM Image height in pixels
+  --if FILE    Input file (default: stdin)
+  --of FILE    Output file (default: stdout)
+  --bs NUM     Block size to read/write
+  --help       Usage information
+  --version    Print version
+	
+Example 1: bitmap2pbm --if usagemap.dat --of image.pbm
+Example 2: cat usagemap.dat | bitmap2pbm --of image.pbm
+
+Written by Andras Majdan
+License: GNU General Public License Version 3
+Report bugs to <majdan.andras@gmail.com>

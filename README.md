@@ -6,7 +6,9 @@ For example creating an image of the first 10000 bytes of memtest binary:
 ```head -c 10000 /boot/memtest86+-4.20 | bitmap2pbm --of memtest.pbm```
 
 Result:
+
 ![Image of memtest86](http://fejlesztek.hu/wp-content/uploads/2013/11/bitmap2pbm.png)
+
 Converted to PNG by [Gimp](http://www.gimp.org/).
 
 ## Usage
@@ -35,12 +37,14 @@ Prints usage information.
 Prints version information.
 
 Program supports stdout/stdin redirections, so the following should work:
-``` cat usagemap.dat | bitmap2pbm --of image.pbm ```
+```cat usagemap.dat | bitmap2pbm --of image.pbm```
 
 However because the size of the input determines the header of output, you cannot redirect stdout and stdin simultaneously because they are not seekable.
 
 You can get progress information by sending a SIGUSR1 signal to the process:
-``` kill -SIGUSR1 pid ``` (where pid is the process identifier)
+```
+kill -SIGUSR1 pid
+``` (where pid is the process identifier)
 
 ## Build
 Program should build on any UNIX like operation system with a standard C compiler and make utility.

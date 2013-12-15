@@ -47,6 +47,7 @@ kill -SIGUSR1 pid
 ``` (where pid is the process identifier)
 
 ## Build
+
 Program should build on any UNIX like operation system with a standard C compiler and make utility.
 
 To compile:
@@ -71,6 +72,7 @@ make clean
 ```
 
 ## Author
+
 Written by Andras Majdan.
 
 License: GNU General Public License Version 3
@@ -78,6 +80,7 @@ License: GNU General Public License Version 3
 Report bugs to <majdan.andras@gmail.com>
 
 ## See also
+
 [bitmapdd](https://github.com/andmaj/bitmapdd) - Creates a bitmap from a file (or device).
 
 [fat2bitmap](https://github.com/andmaj/fat2bitmap) - Creates a bitmap from FAT file system free/used clusters. 

@@ -42,12 +42,9 @@ Program supports stdout/stdin redirections, so the following should work:
 However because the size of the input determines the header of output, you cannot redirect stdout and stdin simultaneously because they are not seekable.
 
 You can get progress information by sending a SIGUSR1 signal to the process:
-```
-kill -SIGUSR1 pid
-``` (where pid is the process identifier)
+```kill -SIGUSR1 pid``` (where pid is the process identifier)
 
 ## Build
-
 Program should build on any UNIX like operation system with a standard C compiler and make utility.
 
 To compile:
